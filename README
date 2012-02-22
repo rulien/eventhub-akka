@@ -1,0 +1,19 @@
+EventHub 
+
+----- 
+
+This is a project that aims to show off how AKKA + ZeroMq can be used to create a fault tolerant pub/sub message system. 
+
+Use Case :
+
+A web application posts a message with an internal document and a status
+
+To that status there are many subscribers that can interpret the message and do something 
+
+And so the story goes
+
+Requirements :
+
+ - The message passing must be fault tolerant and persistent so that if a subscriber goes down the message will eventually reach it's destination(s)
+ - It must be possible to subscribe and unsubscribe runtime 
+ - Simple monitoring of message status (sort of optional if the future is not prohibited in any way)
